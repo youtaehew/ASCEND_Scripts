@@ -16,11 +16,6 @@ namespace YTH.Effect
             if (other.gameObject.layer != _whatIsPlayer) return;
             if (other.TryGetComponent(out MInterface.IDamageable health))
             {
-                Debug.Log("데미지 준다");
-                // CombatData combatData = new CombatData();
-                // combatData.damage = power;
-                // combatData.damageCategory = Define.EDamageCategory.Normal;
-                // combatData.hitPoint = _colliders[i].transform.position;
                 health.ApplyDamage(Boss.currentCombatData);
             }
         }
