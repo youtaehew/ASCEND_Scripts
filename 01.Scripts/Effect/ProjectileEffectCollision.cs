@@ -12,7 +12,7 @@ namespace YTH.Effect
 
         private void OnTriggerEnter(Collider other)
         {
-            Debug.Log("tq 닿았다");
+          
             if (other.gameObject.layer != _whatIsPlayer) return;
             if (other.TryGetComponent(out MInterface.IDamageable health))
             {
