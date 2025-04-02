@@ -51,7 +51,6 @@ namespace YTH.Effect
 
             Vector3 pos = _playerTrm.position;
             var effect = _poolManager.Pop(_ToPlayerEffectPool[3]) as BossEffectPlay;
-            // effect.SetupBossEnemy(_bossEnemy);
             effect.transform.SetPositionAndRotation(pos, transform.parent.rotation);
             effect.PlayEffects();
             _legAnimator.enabled = true;
@@ -80,17 +79,12 @@ namespace YTH.Effect
         {
                 PlayEffectToPlayer(1);
             RuntimeManager.PlayOneShot(_blackHoldeSfx, _playerTrm.position);
-            // for (int i = 0; i < 3; i++)
-            // {
-            //     await UniTask.WaitForSeconds(1f);
-            // }
         }
 
         private void PlayBeamEffect()
         {
             PlayEffect(0);
             RuntimeManager.PlayOneShot(_lazerSfx, _playerTrm.position);
-            // PlayBeamEffectToPlayer();
         }
 
         private void PlayChargeShot()
