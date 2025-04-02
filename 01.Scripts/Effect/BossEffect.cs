@@ -11,7 +11,6 @@ namespace YTH.Effect
 {
     public class BossEffect : MonoBehaviour
     {
-        //slayer
         protected PoolManagerSO _poolManager;
         [SerializeField] private PoolTypeSO[] _EffectPoolType;
         [SerializeField] private Transform[] _effectTrm;
