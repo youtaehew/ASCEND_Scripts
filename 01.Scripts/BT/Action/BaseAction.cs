@@ -16,8 +16,6 @@ namespace YTH.BT.Actions
 
         public override void OnStart()
         {
-            // enemyBase.Value.LegAnimatorCompo.User_FadeToDisabled(0);//legsAnimator
-            // enemyBase.Value.AnimatorCompo.SetFloat("AnimSpeed", animInfoSO.AnimSpeed);
             enemyBase.Value.RotateSpeed = enemyBase.Value.GetStat().attackRotateSpeed;
             enemyBase.Value.SetParam(enemyBase.Value.AnimSpeedParamSO,
                 enemyBase.Value.CurrentBossState == BossState.Step2
@@ -41,9 +39,6 @@ namespace YTH.BT.Actions
         public override void OnEnd()
         {
             enemyBase.Value.SetParam(enemyBase.Value.AnimSpeedParamSO, 1.0f);
-            // enemyBase.Value.RotateSpeed = enemyBase.Value.GetStat().rotateSpeed;
-            // enemyBase.Value.LegAnimatorCompo.User_FadeEnabled(0);
-            // enemyBase.Value.AnimatorCompo.SetFloat("AnimSpeed", 1);
         }
     }
 }
